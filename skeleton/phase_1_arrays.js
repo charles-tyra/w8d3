@@ -25,3 +25,12 @@ Array.prototype.twosum = function() {
 }
 
 console.log([-1, 0, 1, 0, 2, 2].twosum())
+
+
+Array.prototype.transpose = function() {
+    let uniqArr = []
+
+    
+
+    return uniqArr
+}
