@@ -25,3 +25,19 @@ const closure = [1,2,3,4,5].myMap();
 console.log(closure(callback));
 
 
+Array.prototype.myReduce = function(callback, initialValue = undefined) {
+   let total;
+   if (initialValue === undefined){
+      total = this[0];
+      this.slice(1, this.length).myEach(el => {
+         total = callback(total, el);
+      })
+   }
+   else {
+      total = initialValue
+      this.myEach(el => {
+         total = callback(total, el);
+      })
+   }
+   return total;
+}
